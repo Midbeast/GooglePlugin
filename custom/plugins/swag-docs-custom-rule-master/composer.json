@@ -13,7 +13,7 @@
         "shopware/core": "*"
     },
     "extra": {
-        "shopware-plugin-class": "Ets\\CustomRule\\CustomRule",
+        "shopware-plugin-class": "Ets\\GoogleRule\\GoogleRule",
         "label": {
             "de-DE": "GooglePlugin",
             "en-GB": "GooglePlugin"
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ets\\CustomRule\\": "src/"
+            "Ets\\GoogleRule\\": "src/"
         }
     }
 }

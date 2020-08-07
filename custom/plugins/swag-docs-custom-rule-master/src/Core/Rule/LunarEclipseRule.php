@@ -17,7 +17,7 @@ class LunarEclipseRule extends Rule
 
     public function match(RuleScope $scope): bool
     {
-        return true;
+        return false;
     }
 
     public function getConstraints(): array
