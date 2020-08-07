@@ -1,31 +1,31 @@
 {
-    "name": "swag/custom-rule",
-    "description": "Plugin with a custom rule",
+    "name": "ets/googleRule",
+    "description": "Plugin with the Googlerule",
     "version": "v1.0.0",
     "type": "shopware-platform-plugin",
     "license": "MIT",
     "authors": [
         {
-            "name": "shopware AG"
+            "name": "Igor Macevic"
         }
     ],
     "require": {
         "shopware/core": "*"
     },
     "extra": {
-        "shopware-plugin-class": "Swag\\CustomRule\\CustomRule",
+        "shopware-plugin-class": "Ets\\CustomRule\\CustomRule",
         "label": {
-            "de-DE": "Label für das Plugin CustomRule",
-            "en-GB": "Label for the plugin CustomRule"
+            "de-DE": "GooglePlugin",
+            "en-GB": "GooglePlugin"
         },
         "description": {
-            "de-DE": "Beschreibung für das Plugin CustomRule",
-            "en-GB": "Description for the plugin CustomRule"
+            "de-DE": "Dieses Plugin ändert die Preise je nachdem ob Googlekunde oder nicht",
+            "en-GB": "This Plugin changes the prices accordingly to Googleshopping"
         }
     },
     "autoload": {
         "psr-4": {
-            "Swag\\CustomRule\\": "src/"
+            "Ets\\CustomRule\\": "src/"
         }
     }
 }
