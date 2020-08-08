@@ -8,5 +8,8 @@
         <service id="Swag\CustomRule\Core\Rule\LunarEclipseRule">
             <tag name="shopware.rule.definition"/>
         </service>
+        <service id="Swag\CustomRule\Storefront\Subscriber" class="Swag\CustomRule\Storefront\Subscriber\Subscriber">
+            <tag name="kernel.event_subscriber"/>
+        </service>
     </services>
 </container>
