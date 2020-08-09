@@ -4,6 +4,8 @@ namespace Swag\CustomRule\Storefront\Subscriber;
 
 use Shopware\Storefront\Event\StorefrontRenderEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Component\HttpFoundation\Response;
 
 class Subscriber implements EventSubscriberInterface
 {
@@ -16,16 +18,24 @@ class Subscriber implements EventSubscriberInterface
             StorefrontRenderEvent::class => 'onStorefrontRender',
         ];
     }
+
+
     /**
      * @param StorefrontRenderEvent $event
      */
     public function onStorefrontRender(StorefrontRenderEvent $event)
     {
+
         $value = $event->getRequest()->get('t');
         if($value != null){
-            echo "<script>";
-            echo "console.log('This will set a Cookie later.');";
-            echo "</script>";
+            if(!isset($_COOKIE['GoogleCookie'])){
+                setcookie("GoogleCookie", 'true', time()+3600, '/');  /* expire in 1 hour */
+                echo '<script>';
+                echo 'alert("Cookie Is set")';
+                echo '</script>';
+            }
         }
     }
+
+
 }

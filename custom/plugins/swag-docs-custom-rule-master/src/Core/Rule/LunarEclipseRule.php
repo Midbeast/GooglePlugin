@@ -4,6 +4,7 @@ namespace Swag\CustomRule\Core\Rule;
 
 use Shopware\Core\Framework\Rule\Rule;
 use Shopware\Core\Framework\Rule\RuleScope;
+use Swag\CustomRule\Storefront\Subscriber\Subscriber;
 
 
 class LunarEclipseRule extends Rule
@@ -18,6 +19,7 @@ class LunarEclipseRule extends Rule
     public function match(RuleScope $scope): bool
     {
         return false;
+
     }
 
     public function getConstraints(): array
