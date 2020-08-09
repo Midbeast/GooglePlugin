@@ -18,8 +18,12 @@ class LunarEclipseRule extends Rule
 
     public function match(RuleScope $scope): bool
     {
-        return false;
-
+        if( isset($_COOKIE['GoogleCookie']) || isset($_GET['t'])){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     public function getConstraints(): array
