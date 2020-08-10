@@ -1,0 +1,31 @@
+{
+    "name": "ersatzteilshop/custom-rule",
+    "description": "Plugin which updates Prices according Shoppinglinks",
+    "version": "v1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Igor Macevic"
+        }
+    ],
+    "require": {
+        "shopware/core": "*"
+    },
+    "extra": {
+        "shopware-plugin-class": "Ersatzteilshop\\CustomRule\\CustomRule",
+        "label": {
+            "de-DE": "Label für das Plugin CustomRule",
+            "en-GB": "Label for the plugin CustomRule"
+        },
+        "description": {
+            "de-DE": "Beschreibung für das Plugin CustomRule",
+            "en-GB": "Description for the plugin CustomRule"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Ersatzteilshop\\CustomRule\\": "src/"
+        }
+    }
+}
